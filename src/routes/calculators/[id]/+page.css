@@ -1,0 +1,198 @@
+.home-button-container {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  margin: 1rem 0; /* optional, adds space above/below */
+}
+.home-button {
+  display: inline-block;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+.home-button:hover {
+  background-color: #1e40af;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+  color: #2a3042;
+}
+.desc {
+  text-align: center;
+  margin-bottom: 1.3rem;
+  color: #525967;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+.btn {
+  background: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+.btn:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
+.btn:hover:enabled {
+  background: #2563eb;
+}
+.btn-clear {
+  background: #e53e3e;
+}
+.btn-clear:hover {
+  background: #c53030;
+}
+
+.carousel-container {
+  max-width: 70%;
+  margin: 0 auto 2rem auto;
+}
+
+.calculator-card {
+  background: #f8fafc;
+  border-radius: 14px;
+  box-shadow: 0 3px 24px #ccd6dd55;
+  border: 1px solid #c2c8d1;
+  padding: 2rem 2rem 1.5rem 2rem;
+}
+
+.responsive-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  align-items: flex-start; /* align top */
+}
+.responsive-layout form {
+  flex: 1 1 30%;
+  min-width: 250px;
+  /* max-width: 350px; */
+}
+@media (max-width: 700px) {
+  .responsive-layout {
+    flex-direction: column;
+  }
+  .responsive-layout form, .result-box {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #484e5e;
+  margin-bottom: 6px;
+  display: block;
+}
+.form-group input[type="number"],
+.form-group input[type="text"] {
+  padding: 9px 12px;
+  border: 1px solid #c2c8d1;
+  border-radius: 7px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.instance-header {
+  margin-bottom: 1rem;
+}
+.instance-header h2 {
+  display: inline-block;
+  margin-right: 0.75rem;
+  color: #324157;
+}
+.name-input {
+  padding: 6px 8px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #c2c8d1;
+  width: 60%;
+  min-width: 150px;
+}
+
+.result-box {
+  flex: 1 1 30%;
+  min-width: 220px;
+  margin: 1.25rem 0 0 0;
+  padding: 1rem 1rem 1rem 1.1rem;
+  border-radius: 8px;
+  background: #e0ffe1;
+  color: #174520;
+  font-size: 1.18rem;
+  font-weight: 600;
+  box-shadow: 0 0 8px #80cbc016;
+  border: 1px solid #ade4b2;
+  text-align: left;
+  letter-spacing: 0.01em;
+}
+.result-row {
+  margin-bottom: 0.5em;
+}
+
+.comparison-section {
+
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 2rem auto;
+  text-align: center;
+}
+.comparison-wrapper {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+table.comparison-table {
+  width: 100%;
+  font-size: 0.9rem;
+  color: #222;
+}
+table.comparison-table th,
+table.comparison-table td {
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  white-space: nowrap;
+  text-align: center;
+}
+table.comparison-table thead {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+.loading {
+  text-align: center;
+  color: #24659b;
+  margin-top: 2rem;
+}
+.error {
+  color: #c0261e;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-weight: 600;
+}
