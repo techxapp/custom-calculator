@@ -69,7 +69,7 @@
 }
 
 .carousel-container {
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto 2rem auto;
 }
 
@@ -93,13 +93,17 @@
   min-width: 100px;
   /* max-width: 350px; */
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .responsive-layout {
     flex-direction: column;
   }
   .responsive-layout form, .result-box {
     flex: 1 1 100%;
     /* min-width: 100%; */
+  }
+  .carousel-container {
+    max-width: 90%;
+    margin: 0 auto 2rem auto;
   }
 }
 
