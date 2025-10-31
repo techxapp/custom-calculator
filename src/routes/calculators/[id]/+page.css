@@ -78,7 +78,8 @@
   border-radius: 14px;
   box-shadow: 0 3px 24px #ccd6dd55;
   border: 1px solid #c2c8d1;
-  padding: 2rem 2rem 1.5rem 2rem;
+  padding: 2rem 1rem 1.5rem 1rem;
+  min-width: 100px;
 }
 
 .responsive-layout {
@@ -92,13 +93,13 @@
   min-width: 100px;
   /* max-width: 350px; */
 }
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .responsive-layout {
     flex-direction: column;
   }
   .responsive-layout form, .result-box {
     flex: 1 1 100%;
-    min-width: 100%;
+    /* min-width: 100%; */
   }
 }
 
@@ -137,13 +138,13 @@
 
 .result-box {
   flex: 1 1 30%;
-  min-width: 100px;
+  min-width: 50px;
   margin: 1.25rem 0 0 0;
-  padding: 1rem 1rem 1rem 1.1rem;
+  padding: 1rem 0rem 1rem 1.1rem;
   border-radius: 8px;
   background: #e0ffe1;
   color: #174520;
-  font-size: 1.18rem;
+  font-size: 1rem;
   font-weight: 600;
   box-shadow: 0 0 8px #80cbc016;
   border: 1px solid #ade4b2;

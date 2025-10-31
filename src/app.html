@@ -10,9 +10,37 @@
 		<meta name="apple-mobile-web-app-title" content="DropCalc" />
 		<link rel="manifest" href="/site.webmanifest" />
 		%sveltekit.head%
+		<style>
+			.footer {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #fbfbfb;
+				color: #000;
+				/* padding: 1rem; */
+			}
+
+			.footer-content {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 1rem;
+			}
+
+			.footer-text {
+				font-size: 0.875rem;
+			}
+		</style>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
+		<!-- add footer for made with love in india -->
+		<footer class="footer">
+			<div class="footer-content">
+				<p class="footer-text">Made with ❤️ in India</p>
+			</div>
+		</footer>
+
 	</body>
 </html>
 
