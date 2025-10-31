@@ -163,7 +163,7 @@
   text-align: center;
 }
 .comparison-wrapper {
-  display: flex;
+  /* display: flex; */
   justify-content: center; /* centers horizontally */
   width: 100%;
   max-width: 850px;
