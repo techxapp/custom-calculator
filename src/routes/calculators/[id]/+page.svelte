@@ -197,11 +197,11 @@ function safeEval(expr, context) {
       {#if i === currentIndex}
 
           <div class="instance-header">
-            <h2>Instance {i + 1}</h2>
+            <h4>Name</h4>
             <input
               type="text"
               class="name-input"
-              placeholder="Name (optional)"
+              placeholder="Instance {i + 1}"
               bind:value={instance.name}
               maxlength="50"
             />
@@ -230,15 +230,17 @@ function safeEval(expr, context) {
           </form>
 
           {#if Object.keys(instance.results).length}
-            <div class="result-box" style="text-align:left;">
+            <div class="result-box" role="status" aria-live="polite">
               {#each calculatorConfig.outputs as output}
                 <div class="result-row">
-                  <strong>{output.label}:</strong>
-                  {#if instance.results[output.value] !== undefined}
-                    {formatOutput(instance.results[output.value], output.format)} {output.unit}
-                  {:else}
-                    N/A
-                  {/if}
+                  <span class="result-label">{output.label}</span>
+                  <span class="result-value">
+                    {#if instance.results[output.value] !== undefined}
+                      {formatOutput(instance.results[output.value], output.format)} {output.unit}
+                    {:else}
+                      <span class="muted-small">N/A</span>
+                    {/if}
+                  </span>
                 </div>
               {/each}
             </div>
@@ -255,7 +257,7 @@ function safeEval(expr, context) {
         <table class="comparison-table">
           <thead>
             <tr>
-              <th>Name/Instance</th>
+              <th>Name</th>
               {#each calculatorConfig.inputs as input}
                 <th>{input.label}</th>
               {/each}
@@ -267,7 +269,7 @@ function safeEval(expr, context) {
           <tbody>
             {#each instances as instance, i}
               <tr>
-                <td>{instance.name || `Instance ${i + 1}`}</td>
+                <td>{instance.name || `${i + 1}`}</td>
                 {#each calculatorConfig.inputs as input}
                   <td>{instance.inputValues[input.name]}</td>
                 {/each}
